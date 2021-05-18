@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_grap"
+    app:startDestination="@id/homefragment">
+
+    <fragment
+        android:id="@+id/homefragment"
+        android:name="com.firstapp.davaleba5.fragments.homefragment"
+        tools:layout="@layout/fragment_home"
+        android:label="homefragment" >
+        <action
+            android:id="@+id/action_homefragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardFragment"
+        tools:layout="@layout/fragment_desh"
+        android:name="com.firstapp.davaleba5.fragments.dashboardFragment"
+        android:label="dashboardFragment"
+
+        />
+    <argument android:name="amount"
+        android:defaultValue="-1"
+        app:argType="integer"/>
+    <fragment
+        android:id="@+id/notificationFragment"
+        tools:layout="@layout/fragment_notification"
+        android:name="com.firstapp.davaleba5.fragments.NotificationFragment"
+        android:label="NotificationFragment" />
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.myapp.fragments.MenuFragment"
+        android:label="MenuFragment"
+        tools:layout="@layout/fragment_menu"/>
+</navigation>
